@@ -5,6 +5,12 @@ const readdir = util.promisify(fs.readdir);
 
 const modelsFolder = `${__dirname}/../models`;
 
+/**
+ * Middleware to set the model property of the request object.
+ * @param req - Request object
+ * @param res - Response object
+ * @param next - Calls the next middleware function
+ */
 const load = (req,res,next) => {
   let modelName = req.params.model.replace(/[^a-z0-9-_]/gi, '');
   const Model = require(`../models/${modelName}/${modelName}-model.js`);
@@ -12,6 +18,10 @@ const load = (req,res,next) => {
   next();
 };
 
+/**
+ * Returns a list of the models used in the API.
+ * @returns {Promise<string[] | void>} - the list of models
+ */
 const list = () => {
   return readdir(modelsFolder)
     .then(contents =>
