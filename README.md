@@ -5,24 +5,23 @@
 ### Author: Austin Hedeen
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+* [submission PR](https://github.com/austinhedeen-401-advanced-javascript/lab-09/pull/1)
 * [travis](http://xyz.com)
 * [back-end](https://murmuring-brook-43876.herokuapp.com/)
 
 #### Documentation
 * [api docs](https://murmuring-brook-43876.herokuapp.com/api-docs)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
+* [jsdoc](https://murmuring-brook-43876.herokuapp.com/docs/)
 
 ### Modules
-#### `modulename.js`
+#### `app.js`
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+###### `server`
+The Express application (for testing)
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `start(port)`
+Starts the Express server on `port`
 
 ### Setup
 #### `.env` requirements
@@ -31,15 +30,20 @@ Usage Notes or examples
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* Endpoint: `/api-docs`
+  * Renders API Documentation
+* Endpoint: `/docs`
+  * Renders Developer Documentation
+* Endpoint: `/api/v1/:model/`
+  * GET: Fetch all Model records
+  * POST: Create a Model record
+* Endpoint: `/api/v1/:model/:id`
+  * GET: Fetch a Model record
+  * PUT: Update a Model record
+  * DELETE: Delete a Model record
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* `npm test`
 
 #### UML
-Link to an image of the UML for your application and response to events
+![](assets/api-server-uml.jpg)
