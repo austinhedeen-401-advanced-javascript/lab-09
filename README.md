@@ -6,7 +6,7 @@
 
 ### Links and Resources
 * [submission PR](https://github.com/austinhedeen-401-advanced-javascript/lab-09/pull/1)
-* [travis](http://xyz.com)
+* [travis](https://travis-ci.com/austinhedeen-401-advanced-javascript/lab-09)
 * [back-end](https://murmuring-brook-43876.herokuapp.com/)
 
 #### Documentation
