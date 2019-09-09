@@ -73,4 +73,4 @@ let start = (port = process.env.PORT) => {
   });
 };
 
-module.exports = {app,start};
+module.exports = {server: app,start};
