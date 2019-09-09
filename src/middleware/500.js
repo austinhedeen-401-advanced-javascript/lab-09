@@ -1,4 +1,7 @@
 'use strict';
+/**
+ * @module
+ */
 
 /**
  * Middleware to handle 500 responses if the server experiences an error.

@@ -1,4 +1,7 @@
 'use strict';
+/**
+ * @module
+ */
 
 /**
  * Middleware to handle 404 responses if no other path is matched.

@@ -4,6 +4,9 @@ const util = require('util');
 const readdir = util.promisify(fs.readdir);
 
 const modelsFolder = `${__dirname}/../models`;
+/**
+ * @module
+ */
 
 /**
  * Middleware to set the model property of the request object.
